@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blueprints Section</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SLICK SLIDER CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .script-font {
+        font-family: "Caveat", cursive;
+      }
+
+      .nav-active {
+        color: #f78104;
+      }
+      .nav-hover:hover {
+        color: #f78104;
+      }
+
+      .btn-outline {
+        border: 1px solid #f78104;
+        color: #f78104;
+      }
+      .btn-outline:hover {
+        background: #f78104;
+        color: black;
+      }
+
+      .btn-primary {
+        background: #f78104;
+        color: black;
+      }
+      .btn-primary:hover {
+        background: #ff9500;
+      }
+
+      .hero-blue {
+        color: #a0d3cd;
+        margin-bottom: -18px;
+        z-index: 10;
+      }
+      .tagline-yellow {
+        color: #bf670a;
+      }
+
+      .video-bg {
+        background: #202020;
+      }
+      .section-bg {
+        background: #0b0b0b;
+      }
+
+      .icon-box {
+        border: 2px solid #bf670a;
+        padding: 16px;
+        border-radius: 12px;
+        width: 68px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Phase content styles */
+      .phase-item {
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        transition: all 0.5s ease;
+      }
+
+      .phase-title {
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      /* .phase-item.active .phase-title {
+        color: #bf670a;
+      } */
+
+      .phase-description {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+      }
+
+      .phase-item.active .phase-description {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 0.5rem;
+      }
+
+      /* Progress bar styles */
+      .progress-container {
+        width: 100%;
+        height: 6px;
+        background-color: #374151;
+        border-radius: 3px;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background-color: #bf670a;
+        width: 0%;
+        transition: width 0.7s ease;
+      }
+
+      /* Full width slider styles */
+      .full-width-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider-track {
+        display: flex;
+        transition: transform 0.7s ease;
+      }
+
+      .slider-slide {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white">
+    <!-- HERO SECTION -->
+    <section class="relative w-full h-[720px] overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-black"
+      ></div>
+
+      
+
+      <div
+        class="container mx-auto px-4 absolute inset-0 flex flex-col items-center justify-center z-20"
+      >
+        <div class="script-font text-[68px] leading-none hero-blue">
+          Blueprints
+        </div>
+        <div class="text-[58px] font-extrabold -mt-4 text-center">
+          FOR SUCCESS
+        </div>
+        <button
+          class="mt-6 px-7 py-3 rounded-full font-semibold transition btn-primary"
+        >
+          UP-LEVEL YOUR CAREER NOW
+        </button>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="w-full pt-20 pb-24 section-bg">
+      <div class="container mx-auto px-4">
+        <div id="titleSection" class="text-center max-w-3xl mx-auto">
+          <h2 class="text-xl font-semibold tracking-wide">
+            LEARN FROM ONE OF THE WORLD'S TOP SOCIAL IMPACT LEADERS
+          </h2>
+          <p class="mt-3 font-semibold tracking-wide tagline-yellow">
+            GAIN STRATEGY. BUILD MOMENTUM. REACH NEW HEIGHTS
+          </p>
+        </div>
+
+        <div
+          class="mt-14 max-w-5xl mx-auto video-bg rounded-xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.6)]"
+        >
+          <div class="relative">
+            <iframe
+              id="videoFrame"
+              src="https://www.youtube.com/embed/966WaMFgV1k?si=8ytzFYLid2SxRUCO"
+              width="560"
+              height="315"
+              class="w-full h-[380px] object-cover"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+
+            <button
+              id="playBtn"
+              class="absolute inset-0 flex items-center justify-center z-20"
+            >
+              <div
+                class="w-20 h-20 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition"
+              >
+                <svg width="40" height="40" fill="black" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED IN (Slick Slider) -->
+    <section class="bg-white text-black py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-center text-xl font-semibold tracking-wide">
+          FEATURED IN
+        </h2>
+
+        <div class="max-w-5xl mx-auto mt-12 relative px-12">
+          <!-- LEFT ARROW -->
+          <button
+            class="slick-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-orange-400 rounded-full flex items-center justify-center hover:bg-orange-400 hover:text-white transition"
+          >
+            <span class="text-orange-400 text-xl">&#8592;</span>
+          </button>
+
+          <!-- SLIDER -->
+          <div class="featured-slider">
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ceo.svg/512px-Ceo.svg.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Africa-logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/21/Gulf_News_Logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Africa-logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ceo.svg/512px-Ceo.svg.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Africa-logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/21/Gulf_News_Logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Africa-logo.png"
+                class="h-12 mx-auto"
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT ARROW -->
+          <button
+            class="slick-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-orange-400 rounded-full flex items-center justify-center hover:bg-orange-400 hover:text-white transition"
+          >
+            <span class="text-orange-400 text-xl">&#8594;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEASURED GROWTH -->
+    <section class="bg-white text-black py-20">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-center text-2xl font-extrabold tracking-wide text-orange-500"
+        >
+          MEASURED GROWTH. LASTING IMPACT.
+        </h2>
+        <p class="text-center mt-3 font-semibold tracking-wide">
+          UNLOCK RESULTS THROUGH YOUR PERSONAL BLUEPRINT FOR CLARITY,
+          CONFIDENCE,<br />
+          AND LEADERSHIP GROWTH
+        </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16 max-w-6xl mx-auto"
+        >
+          <!-- 6 boxes -->
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/633/633648.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">
+              ACCELERATE CAREER GROWTH IN ONLY 3 MONTHS
+            </h3>
+            <p class="mt-3 text-sm">
+              Professionals with structured mentorship are 65% more likely to move into
+             senior leadership roles within a year.
+            </p>
+          </div>
+
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">
+              SHARPEN CONFIDENCE AND DECISION-MAKING
+            </h3>
+            <p class="mt-3 text-sm">
+              Gain strategiv clarity that helps you make smarter choices faster. Carl will share key insights from his career in social impact and finance
+            </p>
+          </div>
+
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">
+              EXPAND PROFESSIONAL INFLUENCE
+            </h3>
+            <p class="mt-3 text-sm">
+              Learn how to build thought leadership presence that commands trust offline and online.
+            </p>
+          </div>
+
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">
+              DRIVE HIGH-IMPACT TRANSMISSION
+            </h3>
+            <p class="mt-3 text-sm">
+              Turn your ideas into measurable progress. Participants achieve 40% higher completion rated on key goals through focused startegy and accountability.
+            </p>
+          </div>
+
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">GAIN A GLOBAL ADVANTAGE IN SOCIAL IMPACT</h3>
+            <p class="mt-3 text-sm">
+              Leverage Carl's experience across 90+ markets to lead confidently in diverse environments and expand your professional reach.
+            </p>
+          </div>
+
+          <div>
+            <div class="icon-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
+                class="w-8"
+              />
+            </div>
+            <h3 class="mt-5 font-bold text-lg">
+              BUILD LONG-TERM SUSTAINABILITY
+            </h3>
+            <p class="mt-3 text-sm">
+              Shift form reactive decision-making to sustainable growth. Develop habits that keep your progress consistent in your professional and personal life.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="px-10 py-3 rounded-full font-semibold text-white bg-orange-500 hover:bg-orange-600"
+          >
+            I'M READY TO LEARN FROM A GLOBAL LEADER
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLUEPRINTS FOR SUCCESS EXPERIENCE -->
+    <section class="bg-black text-white py-24">
+      <div class="container mx-auto px-4">
+        <!-- Centered title and description above the phase content -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-orange-500 text-2xl font-bold tracking-wide">
+            THE BLUEPRINTS FOR SUCCESS EXPERIENCE
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed opacity-90" style="text-transform: capitalize;">
+            A mentorship program designed around you, your goals, your pace, and
+            your growth.
+          </p>
+        </div>
+
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 "
+        >
+          <!-- LEFT CONTENT -->
+          <div>
+            <!-- PHASE TEXTS -->
+            <div class="space-y-6">
+              <div class="phase-item active" data-step="1">
+                <h3 class="phase-title text-lg font-bold">
+                  THREE MONTHS OF FOCUSED TRANSFORMATION
+                </h3>
+                <p class="phase-description text-sm opacity-80">
+                  A guided journey that helps you define, refine, and activate
+                  your leadership blueprint through intentional reflection and strategic action.
+                </p>
+              </div>
+
+              <div class="phase-item" data-step="2">
+                <h3 class="phase-title text-lg font-bold">
+                  ONE-TO-ONE MENTORSHIP
+                </h3>
+                <p class="phase-description text-sm opacity-80">
+                  Personalized support to unlock your clarity, confidence, and
+                  growth.
+                </p>
+              </div>
+
+              <div class="phase-item" data-step="3">
+                <h3 class="phase-title text-lg font-bold">
+                  TAILORED TO YOUR LEADERSHIP JOURNEY
+                </h3>
+                <p class="phase-description text-sm opacity-80">
+                  A custom blueprint aligned to your personal and professional
+                  ambitions.
+                </p>
+              </div>
+
+              <div class="phase-item" data-step="4">
+                <h3 class="phase-title text-lg font-bold">
+                  GLOBAL PERSPECTIVE, PERSONAL APPLICATION
+                </h3>
+                <p class="phase-description text-sm opacity-80">
+                  Insights from across 90+ markets — applied directly to your
+                  life.
+                </p>
+              </div>
+            </div>
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-container">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE IMAGE / VIDEO -->
+          <div class="relative">
+            <iframe
+              id="videoFrame"
+              src="https://www.youtube.com/embed/966WaMFgV1k?si=8ytzFYLid2SxRUCO"
+              width="560"
+              height="315"
+              class="w-full h-[380px] object-cover"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+
+            <button
+              id="playBtn"
+              class="absolute inset-0 flex items-center justify-center z-20"
+            >
+              <div
+                class="w-20 h-20 bg-white/70 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition"
+              >
+                <svg width="40" height="40" fill="black" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </button>
+          </div>
+            <!-- <img
+              src="https://images.pexels.com/photos/3184613/pexels-photo-3184613.jpeg"
+              class="rounded-xl shadow-xl w-full"
+            />
+          </div> -->
+        </div>
+
+        <!-- FULL WIDTH TEXT SLIDER -->
+        
+      </div>
+      <div class="mt-20">
+          <div
+            class="full-width-slider bg-[#f78104] text-black rounded-xl py-4 overflow-hidden"
+          >
+            <div id="yellowSlider" class="slider-track">
+              <div class="slider-slide py-3 text-center text-lg font-bold">
+                SECURE YOUR SPOT TODAY
+              </div>
+              <div class="slider-slide py-3 text-center text-lg font-bold">
+                LIMITED SEATS AVAILABLE
+              </div>
+              <div class="slider-slide py-3 text-center text-lg font-bold">
+                TRANSFORM YOUR LEADERSHIP
+              </div>
+              <div class="slider-slide py-3 text-center text-lg font-bold">
+                START YOUR BLUEPRINT NOW
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto py-24 text-center">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-orange-500 text-2xl font-bold tracking-wide">
+            THE BLUEPRINTS FOR SUCCESS EXPERIENCE
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed opacity-90" style="text-transform: capitalize;">
+            A mentorship program designed around you, your goals, your pace, and
+            your growth.
+          </p>
+        </div>
+        </div>
+    </section>
+
+    <!-- JS LOGIC FOR PHASE ANIMATION + PROGRESS + SLIDER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Phase content management
+        const phaseItems = document.querySelectorAll(".phase-item");
+        const progressBar = document.getElementById("progressBar");
+        let currentPhase = 0;
+        const totalPhases = phaseItems.length;
+
+        // Function to show a specific phase
+        function showPhase(index) {
+          // Remove active class from all phases
+          phaseItems.forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Add active class to selected phase
+          phaseItems[index].classList.add("active");
+
+          // Update progress bar
+          const progressPercentage = ((index + 1) / totalPhases) * 100;
+          progressBar.style.width = `${progressPercentage}%`;
+
+          currentPhase = index;
+        }
+
+        // Auto-advance phases
+        function autoAdvancePhases() {
+          let nextPhase = (currentPhase + 1) % totalPhases;
+          showPhase(nextPhase);
+        }
+
+        // Set up interval for auto-advancing
+        setInterval(autoAdvancePhases, 4000);
+
+        // Initialize first phase
+        showPhase(0);
+
+        // Add click handlers to phase titles
+        phaseItems.forEach((item, index) => {
+          const title = item.querySelector(".phase-title");
+          title.addEventListener("click", () => {
+            showPhase(index);
+          });
+        });
+
+        // Yellow slider loop
+        const slider = document.getElementById("yellowSlider");
+        let slideIndex = 0;
+        const slideCount = slider.children.length;
+
+        setInterval(() => {
+          slideIndex = (slideIndex + 1) % slideCount;
+          slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }, 3000);
+      });
+    </script>
+
+    <!-- VIDEO + SLICK LOGIC -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const playBtn = document.getElementById("playBtn");
+        const titleSection = document.getElementById("titleSection");
+        const videoFrame = document.getElementById("videoFrame");
+
+        playBtn.addEventListener("click", function () {
+          playBtn.style.display = "none";
+          titleSection.style.display = "none";
+          videoFrame.src += "&autoplay=1";
+        });
+      });
+    </script>
+
+    <!-- Jquery + Slick -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".featured-slider").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: false,
+          responsive: [
+            { breakpoint: 1024, settings: { slidesToShow: 3 } },
+            { breakpoint: 768, settings: { slidesToShow: 2 } },
+            { breakpoint: 480, settings: { slidesToShow: 1 } },
+          ],
+        });
+
+        $(".slick-prev-custom").click(function () {
+          $(".featured-slider").slick("slickPrev");
+        });
+
+        $(".slick-next-custom").click(function () {
+          $(".featured-slider").slick("slickNext");
+        });
+      });
+    </script>
+  </body>
+</html>
